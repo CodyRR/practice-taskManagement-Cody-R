@@ -4,7 +4,6 @@ import { Link } from "react-router";
 
 const TaskList = ( {mockData}) => {
 
-
     return (
         <div>
             <h1>Task List</h1>
