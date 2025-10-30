@@ -4,8 +4,16 @@ import { Link } from "react-router";
 const TaskDetail = ({mockData}) => {
 
     const { id } = useParams();
-    const task = mockData.find((task) => String(task.id) === id)
+    const task = mockData.find((task) => String(task.idq) === id)
 
+    if (!task) {
+		return (
+            <div>
+                <p>Task not found.</p>
+                <Link to="/">Go Back</Link>
+            </div>
+        )
+	}
     return(
         <div>
             <h3>Current Task</h3>
